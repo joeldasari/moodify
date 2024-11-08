@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #121212;
+  --color: #ffffff;
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color);
+}
+
+.hero-text {
+  @apply from-gray-400 to-gray-200 bg-gradient-to-b bg-clip-text text-transparent;
+}
+
+.input {
+  @apply p-2 bg-gray-300 placeholder:text-gray-500 w-full outline-none text-black rounded-md;
+}
+
+.form {
+  @apply bg-gray-300 flex gap-2 font-semibold items-center p-3 rounded-full;
+}
+
+.generate-btn {
+  @apply p-2 w-[100px] text-sm flex justify-center items-center bg-[#1ed760] text-black rounded-full hover:brightness-90;
+}
+
+.suggestion-btn {
+  @apply px-4 py-2 text-sm font-semibold bg-gray-300 text-black rounded-full hover:brightness-90;
 }
